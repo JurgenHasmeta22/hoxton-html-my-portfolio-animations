@@ -1,100 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 * {
-    margin: 0px 0px;
-    padding: 0px 0px;
+    margin: 0 0;
+    padding: 0 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none;
+    transition: 1s;
 }
 
 ul li {
     list-style: none;
 }
-
-
-section.container-5 {
-    display: grid;
-    grid-gap: 40px;
-}
-
-section.container-5 .emdeded-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
-}
-
-section.container-5 .title {
-    display: grid;
-    place-items: center;
-    padding-top: 50px;
-}
-
-section.container-5 .title h6 {
-    font-size: 22px;
-    font-weight: 900;
-    font-family: sans-serif;
-}
-
-section.container-5 .video-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
-    grid-gap: 20px;
-    outline: 1px solid #000;
-}
-
-@media screen and (max-width: 1300px) {
-
- section.container-5 .video-group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    place-items: center;
-    grid-gap: 30px;
-    outline: 1px solid #000;
- }
-
-}
-
-@media screen and (max-width: 900px) {
-
-    section.container-5 .video-group {
-       display: grid;
-       grid-template-columns: 1fr;
-       place-items: center;
-       grid-gap: 40px;
-       outline: 1px solid #000;
-    }
-   
-}
-
-@media screen and (max-width: 400px) {
-
-    section.container-5 .video-group {
-        display: grid;
-        grid-template-columns: 300px;
-        place-items: center;
-        grid-gap: 40px;
-        outline: 1px solid #000;
-     }
-   
-}
-
-section.container-5 .video-group video {
-    height: 300px;
-    width: 300px;
-    outline: 1px solid #000;
-}
-
-svg {
-    height: 200px;
-    width: 300px;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
 section.container-1 {
     height: 100vh;
@@ -118,6 +41,7 @@ section.container-1 {
     display: grid;
     grid-template-columns: 300px  minmax(400px, 600px);
     grid-gap: 30px;
+    animation: scaling 5s infinite linear alternate;
 }
 
 @media screen and (max-width: 900px) {
@@ -152,9 +76,10 @@ section.container-1 {
 
     /* position: -webkit-sticky;
 	position: sticky; */
-    top: 5px;
+    top: 25px;
     z-index: 1;
     position: fixed;
+    animation: rotating 1s infinite linear alternate;
 }
 
 
@@ -172,15 +97,24 @@ section.container-1 {
     transition: 0.5s;
 }
 
+.container-1 header.header-menu nav.navbar-1:hover {
+    animation: rotating 1s infinite linear alternate;
+}
+
+.container-1 header.header-menu nav.navbar-2:hover {
+    animation: rotating 1s infinite linear alternate;
+}
+
+.container-1 main.main-menu .svg-element {
+    animation: rotating 1s infinite linear alternate;
+}
+
 .container-1 header.header-menu nav.navbar-2 ul li a:hover {
     color: #ea755b;
     transition: 0.5s;
+    
 }
 
-/* .container-1 header.header-menu nav.navbar-1 ul {
-    display: grid;
-    justify-content: center;
-} */
 
 .container-1 header.header-menu nav.navbar-2 ul li a {
     color: #ece5e1;
@@ -210,13 +144,9 @@ section.container-1 {
     border: 1px solid #000;
     border-radius: 35px;
     padding: 5px 10px;
+    animation: rotating 1s infinite linear alternate;
     /* grid-area: main-menu-content; */
 }
-
-/* .container-1 main.main-menu .svg-container {
-    grid-area: svg;
-    z-index: 1;
-} */
 
 .container-1 main.main-menu .main-menu-content h2 {
     text-align: center;
@@ -247,6 +177,7 @@ section.container-1 {
 
 .container-1 .icon {
     grid-area: icon;
+    animation: scaling 5s infinite linear alternate;
 }
 
 .container-1 .icon a {
@@ -269,16 +200,10 @@ section.container-2 {
     "title" 0.1fr
     "cards" 0.9fr /
     1fr;
-    /* grid-template: 
-    "title title title" 0.1fr
-    "card-1 card-2 card-3" 0.9fr /
-    0.3fr 0.35fr 0.35fr;
-    /* grid-gap: 20px; */
     place-items: center;
     align-content: start; 
     justify-content: center;
     grid-gap: 15px;
-    /* height: 100vh; */
 }
 
 section.container-2 .cards {
@@ -296,7 +221,6 @@ section.container-2 .cards {
     padding-right: 5px;
     height: auto;
     width: auto;
-    /* overflow: hidden; */
 }
 
 section.container-2 .cards .card {
@@ -312,6 +236,7 @@ section.container-2 .cards .card {
     border-radius: 30px;
     height: auto;
     width: auto;
+    transition: 1s;
 }
 
 section.container-2 .cards .card img {
@@ -331,11 +256,13 @@ section.container-2 .cards .card button {
     font-family: sans-serif;
     font-weight: 600;
     border-radius: 15px;
+    transition: 1s;
 }
 
 
 section.container-2 .cards .card button a {
     color: #ede6e2;
+    transition: 1s;
 }
 
 section.container-2 .cards .card button a:hover {
@@ -351,6 +278,7 @@ section.container-2 .cards .card button:hover {
 section.container-2 .title {
     grid-area: title;
     padding-top: 30px;
+    animation: scaling 3s infinite linear alternate;
 }
 
 section.container-2 .title h3 {
@@ -400,6 +328,7 @@ section.container-3 {
 section.container-3 .title {
     grid-area: title;
     /* outline: 0.5px solid #000; */
+    animation: scaling 3s infinite linear alternate;
 }
 
 section.container-3 .cards {
@@ -430,6 +359,7 @@ section.container-3 .cards .card {
     justify-content: center;
     height: auto;
     width: auto;
+    transition: 1s;
 }
 
 section.container-3 .cards .card img {
@@ -466,16 +396,19 @@ section.container-4 .title  {
     place-items: center;
     background-color: #202419;
     grid-gap: 10px;
+
  }
 
 section.container-4 .title h6  {
-    font-size: 20px;
+    font-size: 18px;
     font-family: sans-serif;
     padding: 20px 0px;
+    animation: scaling 2s infinite linear ;
  }
 
 section.container-4 .title h6 a {
     color: #ede6e2;
+    transition: 1s;
  }
 
 section.container-4 .title h6 a:hover {
@@ -498,13 +431,15 @@ section.container-4 .title h6 a:hover {
 .back-to-top {
     position: fixed;
     background-color: #ea755b;
-    border: solid 1px #00000050;
-    border-radius: 5px;
+    border: solid 3px #00000050;
+    border-radius: 20px;
     padding: 0.3rem 0.6rem;
     bottom: 1rem;
     right: 1rem;
     color: #35382e;
     z-index: 1;
+    animation: scaling 2s infinite linear alternate;
+    font-family: sans-serif;
   }
 
   .back-to-top:hover {
@@ -591,21 +526,132 @@ section.container-3 .cards .card:hover {
     box-shadow: 2px 5px 15px 0 #00000050;
     margin: 0 0;
     padding: 0 0;
+}
+
+section.container-5 {
+    display: grid;
+    grid-gap: 40px;
+}
+
+section.container-5 .emdeded-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+section.container-5 .title {
+    display: grid;
+    place-items: center;
+    padding-top: 50px;
+    animation: scaling 3s infinite linear alternate;
+}
+
+section.container-5 .title h6 {
+    font-size: 22px;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+section.container-5 .video-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+    grid-gap: 20px;
+    outline: 1px solid #000;
+}
+
+@media screen and (max-width: 1300px) {
+
+ section.container-5 .video-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    grid-gap: 30px;
+    outline: 1px solid #000;
+ }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    section.container-5 .video-group {
+       display: grid;
+       grid-template-columns: 1fr;
+       place-items: center;
+       grid-gap: 40px;
+       outline: 1px solid #000;
+    }
    
+}
+
+@media screen and (max-width: 400px) {
+
+    section.container-5 .video-group {
+        display: grid;
+        grid-template-columns: 300px;
+        place-items: center;
+        grid-gap: 40px;
+        outline: 1px solid #000;
+     }
+   
+}
+
+section.container-5 .video-group video {
+    height: 300px;
+    width: 300px;
+    outline: 1px solid #000;
+    animation: rotating-special 5s infinite linear alternate;
+}
+
+svg {
+    height: 200px;
+    width: 300px;
 }
 
 @keyframes scaling {
 
-    from {
-        transform: scale(0);
+    0% {
+        transform: scale(0.7);
     }
 
-    /* 50% {
-        transform: scale(2);
-    } */
+    30 % {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    75% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+@keyframes rotating {
+
+    from {
+        transform: rotate(0deg);
+    }
 
     to {
-        transform: scale(2);
+        transform: rotate(5deg);
+    }
+
+}
+
+@keyframes rotating-special {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(10deg);
     }
 
 }
