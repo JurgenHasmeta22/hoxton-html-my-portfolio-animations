@@ -95,6 +95,7 @@ section.container-1 {
 .container-1 header.header-menu nav.navbar-1 ul li a:hover {
     color: #ea755b;
     transition: 0.5s;
+   
 }
 
 .container-1 header.header-menu nav.navbar-1:hover {
@@ -623,11 +624,19 @@ svg {
     }
 
     75% {
+<<<<<<< HEAD
         transform: scale(0.95);
     }
 
     100% {
         transform: scale(1);
+=======
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+>>>>>>> a678cb178fdfcaa33cb876b0d297ac3d4522293b
     }
 
 }
@@ -641,7 +650,6 @@ svg {
     to {
         transform: rotate(5deg);
     }
-
 }
 
 @keyframes rotating-special {
@@ -651,7 +659,11 @@ svg {
     }
 
     to {
+<<<<<<< HEAD
         transform: rotate(10deg);
+=======
+        transform: rotate(5deg);
+>>>>>>> a678cb178fdfcaa33cb876b0d297ac3d4522293b
     }
 
 }
