@@ -1,6 +1,6 @@
 * {
-    margin: 0px 0px;
-    padding: 0px 0px;
+    margin: 0 0;
+    padding: 0 0;
     box-sizing: border-box;
 }
 html {
@@ -118,6 +118,7 @@ section.container-1 {
     display: grid;
     grid-template-columns: 300px  minmax(400px, 600px);
     grid-gap: 30px;
+    animation: scaling 5s infinite linear alternate;
 }
 
 @media screen and (max-width: 900px) {
@@ -152,9 +153,10 @@ section.container-1 {
 
     /* position: -webkit-sticky;
 	position: sticky; */
-    top: 5px;
+    top: 25px;
     z-index: 1;
     position: fixed;
+    animation: rotating 1s infinite linear alternate;
 }
 
 
@@ -170,11 +172,13 @@ section.container-1 {
 .container-1 header.header-menu nav.navbar-1 ul li a:hover {
     color: #ea755b;
     transition: 0.5s;
+   
 }
 
 .container-1 header.header-menu nav.navbar-2 ul li a:hover {
     color: #ea755b;
     transition: 0.5s;
+    
 }
 
 /* .container-1 header.header-menu nav.navbar-1 ul {
@@ -247,6 +251,7 @@ section.container-1 {
 
 .container-1 .icon {
     grid-area: icon;
+    animation: scaling 5s infinite linear alternate;
 }
 
 .container-1 .icon a {
@@ -596,8 +601,32 @@ section.container-3 .cards .card:hover {
 
 @keyframes scaling {
 
+    0% {
+        transform: scale(0.7);
+    }
+
+    30 % {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    75% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+
+}
+
+@keyframes rotating {
+
     from {
-        transform: scale(0);
+        transform: rotate(0deg);
     }
 
     /* 50% {
@@ -605,7 +634,7 @@ section.container-3 .cards .card:hover {
     } */
 
     to {
-        transform: scale(2);
+        transform: rotate(5deg);
     }
 
 }
