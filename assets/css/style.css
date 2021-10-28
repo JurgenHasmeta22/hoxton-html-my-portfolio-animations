@@ -656,3 +656,72 @@ svg {
         transform: rotate(5deg);
     }
 }
+
+section.container-7 {
+    display: grid;
+    grid-template-rows: 40px 1fr;
+    grid-gap: 20px;
+    padding-top: 30px;
+}
+
+section.container-7 .small-container h6 {
+    font-size: 30px;
+    font-weight: 900;
+    display: grid;
+    place-items: center;
+    animation: 3s scaling infinite alternate;
+    color: #f5cf04;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+    font-style: italic;
+}
+
+section.container-7 .progress-container {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 20px;
+    place-items: center;
+    padding-top: 10px;
+    outline: 1px solid #000;
+    padding-bottom: 10px;
+    padding: 10px;
+}
+
+section.container-7 .progress-bar-wrapper {
+    height: 35px;
+    border: solid 2px #ea755b;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: 0.5s;
+    width: 80%;
+}
+
+section.container-7 .progress-container .progress-bar-wrapper .progress-bar span {
+    /* display: grid;
+    place-items: center; */
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 10px;
+    font-style: italic;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    color: #35382e;
+}
+
+section.container-7 .progress-bar-wrapper .progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #62c4eb;
+    transition: 3s;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+}
+
+section.container-7 .progress-bar-wrapper:hover .progress-bar {
+    width: 80%;
+}
+
+section.container-7 .progress-bar-wrapper:hover {
+    border: 5px soild #ea755b;
+}
